@@ -69,7 +69,7 @@ console.log(firstName + ' ' + lastName + ' is a ' + age + ' year(s) old ' + job 
  /*********************************************
  * Basic Operators 
  ***/   
-
+/*
 var num1, num2, add, sub, mul, div;
 
 num1 = 25;
@@ -84,3 +84,48 @@ console.log('Div:', num1 / num2);
 //logical
 var num1Gt = num1 > num2;
 console.log(num1Gt, typeof num1Gt);
+*/
+
+ /*********************************************
+ * Operator Precedence
+ ***/   
+
+var res = 3 + 4 * 5;
+
+console.log(res);
+
+//calculate average - using grouping operator
+
+var num1 = 10;
+var num2 = 20;
+
+var avg = (num1 + num2) / 2;
+
+console.log('Average is: ', avg);
+
+
+// Equality Operator to understand Associativity
+var x, y;
+
+x = y = 5;
+
+console.log(x, y);
+
+
+// other operators 
+    
+// Multiplication Assignment Operator
+
+var a = 50;
+a *= 2;  // instead of a = a * 2
+
+console.log(a); // expec out = 100
+
+
+// Increment Operators
+
+var d = 2;
+
+d++;
+
+console.log(d);
