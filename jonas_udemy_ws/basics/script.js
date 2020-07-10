@@ -233,6 +233,7 @@ switch(job) {
 // falsy :  0, '', null, undefined, NAN
 // truthy : not falsy
 
+/*
 var height = '23';
 
 if(height || height === 0 ) { // if true
@@ -246,3 +247,67 @@ if(height === '23') {
 } else if(height == '23') {
     console.log('The == operator does Type Coercion');
 } 
+*/
+
+ /*********************************************
+ * Coding Challenge - 2
+ *   Find who won the game through avg score.
+ ****/
+
+var john_score = [57, 134, 105];
+var mike_score = [97, 134, 105];
+
+var john_avg  = 0;
+var mike_avg = 0;
+
+for(var i=0;i<john_score.length;i++){
+    john_avg += john_score[i];
+}
+
+john_avg = john_avg / john_score.length;
+
+for(var i=0;i<mike_score.length;i++){
+    mike_avg += mike_score[i];
+}
+
+mike_avg = mike_avg / mike_score.length;
+
+console.log("John Avg: ", john_avg, ". Mike Avg: ", mike_avg);
+
+if(john_avg > mike_avg) {
+    console.log("John won.");
+} else if(john_avg == mike_avg) {
+    console.log("Tie.");
+} else {
+    console.log("Mike Won.");
+}
+
+
+var mary_score = [97, 134, 105];
+var mary_avg = 0;
+
+for(var i=0;i<mary_score.length;i++){
+    mary_avg += mary_score[i];
+}
+mary_avg = mary_avg / mary_score.length;
+
+console.log("Mary Avg: ", mary_avg, ".");
+
+if(john_avg == mike_avg || john_avg == mary_avg || mike_avg == mary_avg) {
+    console.log("Tie.");
+} else if( john_avg >= mike_avg ) {
+    if(john_avg > mary_avg) {
+        console.log("John won.");
+    } else {
+        console.log("Mary won.");
+    }
+} else if( mike_avg >= john_avg ) {
+    if(mike_avg > mary_avg) {
+        console.log("Mike won.");
+    } else {
+        console.log("Mary won.");
+    }
+}
+
+// end of coding challenge - 2
+
