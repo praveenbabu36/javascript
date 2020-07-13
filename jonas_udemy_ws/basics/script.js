@@ -253,7 +253,7 @@ if(height === '23') {
  * Coding Challenge - 2
  *   Find who won the game through avg score.
  ****/
-
+/*
 var john_score = [57, 134, 105];
 var mike_score = [97, 134, 105];
 
@@ -308,6 +308,130 @@ if(john_avg == mike_avg || john_avg == mary_avg || mike_avg == mary_avg) {
         console.log("Mary won.");
     }
 }
-
+*/
 // end of coding challenge - 2
 
+ /*********************************************
+  * Functions
+  ****/
+
+ // Functon Declaration 
+ //function whatDoYouDo(job, name) {}
+
+ // Function as Expression
+ /*
+ var whatDoYouDo = function(job, name) {
+     return name + ' is a ' + job;
+ }
+
+ console.log(whatDoYouDo('driver', 'ramesh'));
+*/
+
+
+/*********************************************
+ * Arrays
+ *********************************************/
+/*
+var names = ['John', 'Mark', 450, 'Mary'];
+var years = new Array(1998, 1969, 1948);
+
+console.log(names[1]);
+console.log(names.length);
+
+//mutate array
+names[4] = 'Ben';
+console.log(names);
+
+//push - insert element at the end 
+names.push('Red');
+console.log(names);
+
+//unshift - insert an element at the start
+names.unshift("Cricket");
+console.log(names);
+
+//pop - remove last element
+names.pop();
+console.log(names);
+
+//shift - remove element at the start
+names.shift();
+console.log(names);
+
+// indexOf - find the position of element
+console.log(names.indexOf(450));
+
+console.log(names.indexOf('praveen'));
+*/
+
+/*********************************************
+ * Objects and Properties
+ *********************************************/
+
+ // Create Object using Object Initializer 
+ /*
+var personObj = {
+    
+    name: 'praveen',
+    birthYear: 1981,
+    
+    calcAge: function(current_year) {
+        this.age = current_year - this.birthYear;
+    }
+}
+
+console.log(personObj.name, 'born on', personObj.birthYear);
+console.log(personObj)
+
+personObj.calcAge(2020);
+console.log(personObj);
+
+*/
+
+/*
+// using Constructor - method1
+var animalObj = new Object();
+animalObj.name = 'Dog';
+animalObj.age = 2;
+
+console.log(animalObj);
+
+
+// using Constructor - method2
+function Flower(name, color) {
+    this.name = name;
+    this.color = color;
+}
+
+var lilly = new Flower('Lilly', 'White');
+console.log(lilly);
+*/
+
+/*********************************************
+ * Coding Challenge - Calculate BMI using Objects
+ * 
+ * Compare body mass index of mark and john. 
+ *  Print whether BMI of Mark is higher than John.
+ *  BMI = Mass / Height ^ 2
+ *********************************************/
+
+function Person(name, mass, height) {
+    
+    this.name = name;
+    this.mass = mass;
+    this.height = height;
+
+    this.calcBMI = function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+
+var john = new Person('John', 95, 2.5);
+var mark = new Person('Mark', 105, 2.2);
+
+var bmiFlag = mark.calcBMI() > john.calcBMI();
+
+console.log(john, mark);
+
+console.log('Is BMI of Mark greater than John: ', bmiFlag);
